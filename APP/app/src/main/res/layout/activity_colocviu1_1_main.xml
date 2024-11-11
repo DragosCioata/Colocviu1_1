@@ -7,13 +7,72 @@
     android:layout_height="match_parent"
     tools:context=".Colocviu1_1MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Buton pentru Nord -->
+        <Button
+            android:id="@+id/button_north"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NORTH"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Butoanele pentru Vest și Est, aliniate pe orizontală -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_west"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WEST"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/button_east"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EAST"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Buton pentru Sud -->
+        <Button
+            android:id="@+id/button_south"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SOUTH"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp" />
+
+        <!-- TextView pentru afișarea textului direcțiilor selectate -->
+        <TextView
+            android:id="@+id/textView_output"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text=""/>
+
+        <!-- Buton pentru navigare către activitatea secundară -->
+        <Button
+            android:id="@+id/button_navigate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NAVIGATE TO SECONDARY ACTIVITY"
+            android:layout_marginTop="20dp" />
+        <Button
+            android:id="@+id/button_start_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Service" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
